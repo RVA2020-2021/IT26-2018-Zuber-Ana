@@ -77,7 +77,6 @@ public class KlijentRestController {
 		return new ResponseEntity<Klijent>(HttpStatus.OK);
 	}
 
-	@Transactional
 	@DeleteMapping("klijent/{id}")
 	@ApiOperation(value = "Briše klijenta iz baze podataka (na osnovu prosleđene ID vrednosti)")
 	public ResponseEntity<Klijent> deleteKlijent(@PathVariable Integer id) {
