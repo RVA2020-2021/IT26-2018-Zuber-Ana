@@ -30,6 +30,7 @@ import rva.repository.TipRacunaRepository;
 @RestController
 @Api(tags = {"Racun CRUD operacije"})
 public class RacunRestController {
+	//komentar za commit
 
 	@Autowired
 	private RacunRepository racunRepository;
