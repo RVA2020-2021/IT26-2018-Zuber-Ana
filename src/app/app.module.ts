@@ -29,37 +29,37 @@ import { TipRacunaDialogComponent } from './components/dialogs/tip-racuna-dialog
 import { KreditDialogComponent } from './components/dialogs/kredit-dialog/kredit-dialog.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    KreditComponent,
-    KlijentComponent,
-    TipRacunaComponent,
-    HomeComponent,
-    AboutComponent,
-    AuthorComponent,
-    TipRacunaDialogComponent,
-    KreditDialogComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    MatButtonModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatListModule,
-    MatGridListModule,
-    MatExpansionModule,
-    MatTableModule,
-    MatToolbarModule,
-    MatSnackBarModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        KreditComponent,
+        KlijentComponent,
+        TipRacunaComponent,
+        HomeComponent,
+        AboutComponent,
+        AuthorComponent,
+        TipRacunaDialogComponent,
+        KreditDialogComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        MatButtonModule,
+        MatIconModule,
+        MatSidenavModule,
+        MatListModule,
+        MatGridListModule,
+        MatExpansionModule,
+        MatTableModule,
+        MatToolbarModule,
+        MatSnackBarModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
