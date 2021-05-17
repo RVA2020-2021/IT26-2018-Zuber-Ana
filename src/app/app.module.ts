@@ -1,42 +1,50 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatButtonModule } from '@angular/material/button'
-import { MatIconModule } from '@angular/material/icon'
-import { MatSidenavModule } from '@angular/material/sidenav'
-import { MatListModule } from '@angular/material/list'
-import { MatGridListModule } from '@angular/material/grid-list'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
+
 import { KreditComponent } from './components/kredit/kredit.component';
 import { KlijentComponent } from './components/klijent/klijent.component';
-import { RacunComponent } from './components/racun/racun.component';
 import { TipRacunaComponent } from './components/tip-racuna/tip-racuna.component';
 import { HomeComponent } from './components/core/home/home.component';
 import { AboutComponent } from './components/core/about/about.component';
 import { AuthorComponent } from './components/core/author/author.component';
 
-import { MatTableModule } from '@angular/material/table';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { TipRacunaDialogComponent } from './components/dialogs/tip-racuna-dialog/tip-racuna-dialog.component';
+import { KreditDialogComponent } from './components/dialogs/kredit-dialog/kredit-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     KreditComponent,
     KlijentComponent,
-    RacunComponent,
     TipRacunaComponent,
     HomeComponent,
     AboutComponent,
-    AuthorComponent
+    AuthorComponent,
+    TipRacunaDialogComponent,
+    KreditDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
@@ -44,8 +52,12 @@ import { HttpClientModule } from '@angular/common/http';
     MatGridListModule,
     MatExpansionModule,
     MatTableModule,
-    HttpClientModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

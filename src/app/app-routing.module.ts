@@ -5,14 +5,12 @@ import { AuthorComponent } from './components/core/author/author.component';
 import { HomeComponent } from './components/core/home/home.component';
 import { KlijentComponent } from './components/klijent/klijent.component';
 import { KreditComponent } from './components/kredit/kredit.component';
-import { RacunComponent } from './components/racun/racun.component';
 import { TipRacunaComponent } from './components/tip-racuna/tip-racuna.component';
 
 
 const routes: Routes = [
   { path: 'klijent', component: KlijentComponent },
   { path: 'kredit', component: KreditComponent },
-  { path: 'racun', component: RacunComponent },
   { path: 'tipRacuna', component: TipRacunaComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
