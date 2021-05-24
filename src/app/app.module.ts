@@ -21,12 +21,15 @@ import { TipRacunaComponent } from './components/tip-racuna/tip-racuna.component
 import { HomeComponent } from './components/core/home/home.component';
 import { AboutComponent } from './components/core/about/about.component';
 import { AuthorComponent } from './components/core/author/author.component';
-
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { TipRacunaDialogComponent } from './components/dialogs/tip-racuna-dialog/tip-racuna-dialog.component';
 import { KreditDialogComponent } from './components/dialogs/kredit-dialog/kredit-dialog.component';
+import { KlijentDialogComponent } from './components/dialogs/klijent-dialog/klijent-dialog.component';
+
+import { MatSelectModule } from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
     declarations: [
@@ -38,7 +41,8 @@ import { KreditDialogComponent } from './components/dialogs/kredit-dialog/kredit
         AboutComponent,
         AuthorComponent,
         TipRacunaDialogComponent,
-        KreditDialogComponent
+        KreditDialogComponent,
+        KlijentDialogComponent
     ],
     imports: [
         BrowserModule,
@@ -57,7 +61,9 @@ import { KreditDialogComponent } from './components/dialogs/kredit-dialog/kredit
         MatDialogModule,
         MatFormFieldModule,
         MatInputModule,
-        FormsModule
+        FormsModule,
+        MatSelectModule,
+        MatNativeDateModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

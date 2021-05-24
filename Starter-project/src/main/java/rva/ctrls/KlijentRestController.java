@@ -36,7 +36,6 @@ public class KlijentRestController {
 	@Autowired
 	private KreditRepository kreditRepository;
 
-
 	@GetMapping("klijent")
 	@ApiOperation(value = "Vraća kolekciju svih klijenata iz baze podataka")
 	public Collection<Klijent> getKlijenti() {
