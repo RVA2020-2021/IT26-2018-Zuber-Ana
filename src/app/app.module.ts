@@ -17,6 +17,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 import { KreditComponent } from './components/kredit/kredit.component';
 import { KlijentComponent } from './components/klijent/klijent.component';
+import { RacunComponent } from './components/racun/racun.component';
 import { TipRacunaComponent } from './components/tip-racuna/tip-racuna.component';
 import { HomeComponent } from './components/core/home/home.component';
 import { AboutComponent } from './components/core/about/about.component';
@@ -27,9 +28,15 @@ import { MatInputModule } from '@angular/material/input';
 import { TipRacunaDialogComponent } from './components/dialogs/tip-racuna-dialog/tip-racuna-dialog.component';
 import { KreditDialogComponent } from './components/dialogs/kredit-dialog/kredit-dialog.component';
 import { KlijentDialogComponent } from './components/dialogs/klijent-dialog/klijent-dialog.component';
+import { RacunDialogComponent } from './components/dialogs/racun-dialog/racun-dialog.component';
 
 import { MatSelectModule } from '@angular/material/select';
 import { MatNativeDateModule } from '@angular/material/core';
+
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
 
 @NgModule({
     declarations: [
@@ -37,12 +44,14 @@ import { MatNativeDateModule } from '@angular/material/core';
         KreditComponent,
         KlijentComponent,
         TipRacunaComponent,
+        RacunComponent,
         HomeComponent,
         AboutComponent,
         AuthorComponent,
         TipRacunaDialogComponent,
         KreditDialogComponent,
-        KlijentDialogComponent
+        KlijentDialogComponent,
+        RacunDialogComponent
     ],
     imports: [
         BrowserModule,
@@ -64,6 +73,10 @@ import { MatNativeDateModule } from '@angular/material/core';
         FormsModule,
         MatSelectModule,
         MatNativeDateModule,
+        MatSortModule,
+        MatPaginatorModule,
+        MatCheckboxModule,
+
     ],
     providers: [],
     bootstrap: [AppComponent]

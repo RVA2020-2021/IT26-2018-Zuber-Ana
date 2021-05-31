@@ -1,10 +1,12 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Subscription } from 'rxjs';
 import { TipRacuna } from 'src/app/models/tipRacuna';
 import { TipRacunaService } from 'src/app/services/tip-racuna.service';
 import { TipRacunaDialogComponent } from '../dialogs/tip-racuna-dialog/tip-racuna-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-tip-racuna',
@@ -17,6 +19,8 @@ export class TipRacunaComponent implements OnInit, OnDestroy {
   displayedColumns = ['id', 'naziv', 'oznaka', 'opis', 'actions'];
   dataSource: MatTableDataSource<TipRacuna>;
   subscription: Subscription;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
 
   constructor(private tipRacunaService: TipRacunaService, public dialog: MatDialog) { }
 
@@ -31,7 +35,10 @@ export class TipRacunaComponent implements OnInit, OnDestroy {
   public loadData() {
     this.subscription = this.tipRacunaService.getAllTipRacuns().subscribe(
       data => {
+        console.log(data);
         this.dataSource = new MatTableDataSource(data);
+        this.dataSource.sort = this.sort;
+        this.dataSource.paginator = this.paginator;
       }
     ),
       (error: Error) => {
@@ -48,5 +55,11 @@ export class TipRacunaComponent implements OnInit, OnDestroy {
           this.loadData();
         }
       })
+  }
+
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim();
+    filterValue = filterValue.toLocaleLowerCase();
+    this.dataSource.filter = filterValue;
   }
 }
