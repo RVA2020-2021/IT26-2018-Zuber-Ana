@@ -29,12 +29,12 @@ export class RacunDialogComponent implements OnInit {
     this.tipRacunaSubscription.unsubscribe();
   }
 
-
   ngOnInit(): void {
-    this.tipRacunaSubscription = this.tipRacunaService.getAllTipRacuns()
-      .subscribe(tipoviRacuna => {
-        this.tipoviRacuna = this.tipoviRacuna;
-      }),
+    this.tipRacunaSubscription = this.tipRacunaService.getAllTipRacuns().subscribe(
+      data => {
+        this.tipoviRacuna = data;
+      }
+    ),
       (error: Error) => {
         console.log(error.name + ' ' + error.message);
       }

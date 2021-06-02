@@ -15,26 +15,27 @@
         <ng-container matColumnDef="tipRacuna">
             <mat-header-cell *matHeaderCellDef mat-sort-header>Tip Racuna</mat-header-cell>
             <mat-cell *matCellDef="let row"> {{ row.tipRacuna.naziv }}</mat-cell>
-        </ng-container>
 
-        <ng-container matColumnDef="naziv">
-            <mat-header-cell *matHeaderCellDef mat-sort-header>Naziv</mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{ row.Naziv }}</mat-cell>
-        </ng-container>
+            <ng-container matColumnDef="naziv">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Naziv</mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{ row.naziv }}</mat-cell>
+            </ng-container>
 
-        <ng-container matColumnDef="oznaka">
-            <mat-header-cell *matHeaderCellDef mat-sort-header>Oznaka</mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{ row.oznaka }}</mat-cell>
-        </ng-container>
+            <ng-container matColumnDef="oznaka">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Oznaka</mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{ row.oznaka }}</mat-cell>
+            </ng-container>
 
-        <ng-container matColumnDef="opis">
-            <mat-header-cell *matHeaderCellDef mat-sort-header>Opis</mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{ row.opis }}</mat-cell>
-        </ng-container>
+            <ng-container matColumnDef="opis">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Opis</mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{ row.opis }}</mat-cell>
+            </ng-container>
 
-        <ng-container matColumnDef="klijent">
-            <mat-header-cell *matHeaderCellDef mat-sort-header>Klijent</mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{ row.klijent.id }}</mat-cell>
+            <ng-container matColumnDef="klijent">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Klijent</mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{ row.klijent.id }}</mat-cell>
+            </ng-container>
+
         </ng-container>
         <!-- actions -->
         <ng-container matColumnDef="actions">
@@ -50,7 +51,7 @@
                     <mat-icon aria-label="Edit">edit</mat-icon>
                 </button>
 
-                <button mat-icon-button color="primary" (click)="openDialog(3, row.id, row.naziv,
+                <button mat-icon-button color="primary" (click)="openDialog(3, row.id, row.naziv, 
             row.oznaka, row.opis, row.tipRacuna, row.klijent)">
                     <mat-icon aria-label="Delete">delete</mat-icon>
                 </button>

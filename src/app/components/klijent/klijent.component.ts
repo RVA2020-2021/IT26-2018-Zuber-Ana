@@ -67,9 +67,9 @@ export class KlijentComponent implements OnInit, OnDestroy {
       }
   }
 
-  public openDialog(flag: number, id?: number, ime?: string, prezime?: string, broj_lk?: number, kredit?: Kredit) {
+  public openDialog(flag: number, id?: number, ime?: string, prezime?: string, brojLk?: number, kredit?: Kredit) {
     const dialogRef = this.dialog.open(KlijentDialogComponent,
-      { data: { id, ime, prezime, broj_lk, kredit } });
+      { data: { id, ime, prezime, brojLk, kredit } });
     dialogRef.componentInstance.flag = flag;
 
     dialogRef.afterClosed().subscribe(result => {
