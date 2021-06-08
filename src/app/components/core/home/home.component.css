@@ -7,5 +7,11 @@
     width: auto;
   }
 
+  .image-container {
+   overflow: hidden;
+   height: 200px; 
+   width:  400px; 
+  }
+
 
   
